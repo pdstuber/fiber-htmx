@@ -1,0 +1,13 @@
+{{ $nextPage := .NextPage}}
+{{ $length := len .Contacts}}
+{{ range $index, $contact := .Contacts }}
+{{if eq $index (dec $length) }}
+<tr hx-get="/contacts/?page={{$nextPage}}" hx-trigger="revealed" hx-swap="afterend">
+{{else}}
+<tr>
+{{end}}
+    <td>{{$contact.Name}}</td>
+    <td>{{$contact.Email}}</td>
+    <td>{{$contact.ID}}</td>
+</tr>
+{{ end }}
