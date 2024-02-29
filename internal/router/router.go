@@ -51,6 +51,7 @@ func New(listenPort string) *Server {
 	app.Use(func(c *fiber.Ctx) error {
 		return c.SendStatus(404)
 	})
+
 	return &Server{
 		listenPort: listenPort,
 		fiberApp:   app,
