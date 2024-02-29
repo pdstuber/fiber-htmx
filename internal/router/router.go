@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/filesystem"
 	"github.com/gofiber/template/html/v2"
 	"github.com/pdstuber/fiber-htmx/views"
 )
@@ -40,12 +39,6 @@ func New(listenPort string) *Server {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.Render("index", nil, "layouts/main")
 	})
-
-	app.Use("/css", filesystem.New(filesystem.Config{
-		Root:       http.FS(views.Viewsfs),
-		PathPrefix: "css",
-		Browse:     true,
-	}))
 
 	app.Get("/contacts", func(c *fiber.Ctx) error {
 		page, err := strconv.Atoi(c.Query("page"))
