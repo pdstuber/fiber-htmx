@@ -2,12 +2,12 @@
 {{ $length := len .Contacts}}
 {{ range $index, $contact := .Contacts }}
 {{if eq $index (dec $length) }}
-<tr hx-get="/contacts/?page={{$nextPage}}" hx-trigger="revealed" hx-swap="afterend">
+<tr hx-get="/contacts/?page={{$nextPage}}" hx-trigger="revealed" hx-swap="afterend" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
 {{else}}
 <tr>
 {{end}}
-    <td>{{$contact.Name}}</td>
-    <td>{{$contact.Email}}</td>
-    <td>{{$contact.ID}}</td>
+    <td class="px-6 py-4">{{$contact.Name}}</td>
+    <td class="px-6 py-4">{{$contact.Email}}</td>
+    <td class="px-6 py-4">{{$contact.ID}}</td>
 </tr>
 {{ end }}

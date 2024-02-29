@@ -1,40 +1,40 @@
 {{template "partials/header" .}}
-
-<table hx-indicator=".htmx-indicator">
-  <thead>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+<table hx-indicator=".htmx-indicator" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>ID</th>
+      <th class="px-6 py-3">Name</th>
+      <th class="px-6 py-3">Email</th>
+      <th class="px-6 py-3">ID</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Agent Smith</td>
-      <td>void10@null.org</td>
-      <td>7036G9A8G0</td>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="px-6 py-4">Agent Smith</td>
+      <td class="px-6 py-4">void10@null.org</td>
+      <td class="px-6 py-4">7036G9A8G0</td>
     </tr>
-    <tr>
-      <td>Agent Smith</td>
-      <td>void11@null.org</td>
-      <td>1AF6B80EAC</td>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="px-6 py-4">Agent Smith</td>
+      <td class="px-6 py-4">void11@null.org</td>
+      <td class="px-6 py-4">1AF6B80EAC</td>
     </tr>
-    <tr>
-      <td>Agent Smith</td>
-      <td>void12@null.org</td>
-      <td>5C0F48705G</td>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"> 
+      <td class="px-6 py-4">Agent Smith</td>
+      <td class="px-6 py-4">void12@null.org</td>
+      <td class="px-6 py-4">5C0F48705G</td>
     </tr>
-    <tr>
-      <td>Agent Smith</td>
-      <td>void13@null.org</td>
-      <td>AB5CE9D1EG</td>
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <td class="px-6 py-4">Agent Smith</td>
+      <td class="px-6 py-4">void13@null.org</td>
+      <td class="px-6 py-4">AB5CE9D1EG</td>
     </tr>
     <tr hx-get="/contacts/?page=2" hx-trigger="revealed" hx-swap="afterend">
-      <td>Agent Smith</td>
-      <td>void29@null.org</td>
-      <td>55F49448C0</td>
+      <td class="px-6 py-4">Agent Smith</td>
+      <td class="px-6 py-4">void29@null.org</td>
+      <td class="px-6 py-4">55F49448C0</td>
     </tr>
   </tbody>
 </table>
-
+</div>
 {{template "partials/footer" .}}
